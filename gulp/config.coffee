@@ -25,8 +25,8 @@ module.exports =
 			log : false
 	concat :
 		lib : [
-			src + common + 'js/jquery321.min.js',
-			src + common + 'js/TweenMax.min.js'
+			src + common + 'js/lib/jquery321.js',
+			src + common + 'js/lib/TweenMax.min.js'
 		]
 		filename : 'lib.js'
 		dest : dest + common + 'js/'
@@ -35,6 +35,7 @@ module.exports =
 		dest : dest
 		entry :
 			'js/index' : src + 'js/index.js'
+			'common/js/common' : src + 'common/js/common.js'
 		output :
 			publicPath : dest
 			filename : '[name].js'

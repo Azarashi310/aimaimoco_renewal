@@ -1,8 +1,8 @@
+$themeColor:#0f74a3;
 #globalNavBlock{
 	position: relative;
 	margin:0 30px;
 	.globalNav__header{
-		padding: 10px 0;
 		font-size:0;
 	}
 	.globalNav__Logo{
@@ -21,21 +21,65 @@
 		.link{
 			text-decoration: none;
 			font-size:16px;
-			color: #0f74a3;
-			padding:9px 5px 8px 5px;
+			color: $themeColor;
+			padding:0 5px 0 5px;
 			margin:0 11px;
+			display: block;
+			line-height: 50px;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				height:4px;
+				width:100%;
+				background-color: $themeColor;
+				left:0;
+				bottom:-4px;
+				display: block;
+				transition:bottom 0.4s ease-in-out;
+			}
+			&.current{
+				&:after{
+					bottom:-1px;
+				}
+			}
+			&:hover{
+				&:after{
+					bottom:-1px;
+				}
+			}
 		}
 	}
 	.globalNav__side{
 		position: absolute;
-		left:0;
-		top:0;
-		width:30px;
-		.copyright{
-			color: #0f74a3;
-			font-size:12px;
-			height:640px;
-			writing-mode: sideways-lr;
+		&.left{
+			left: -30px;
+			top: 0;
+			width:auto;
+			text-align: center;
+			transform: rotate(180deg);
+			.copyright{
+				color: $themeColor;
+				font-size:12px;
+				writing-mode: vertical-rl;
+				line-height: 30px;
+				margin:0 2px 0 0;
+			}
+		}
+		&.right{
+			right:-30px;
+			top:0;
+			width:auto;
+			text-align: center;
+			.buttons{
+				line-height: 30px;
+			}
+			.button{
+				width:8px;
+				height:8px;
+				background-color: $themeColor;
+				border-radius: 50%;
+			}
 		}
 	}
 }

@@ -15,6 +15,8 @@ html
       title あいまいもこ
       +importStyleSheet(commonPath + 'css/reset.css')
       +importStyleSheet(commonPath + 'css/common.css')
+      +importJavascript(commonPath + 'js/lib.js')
+      +importJavascript(commonPath + 'js/common.js')
       block css
       block js
    body
@@ -40,11 +42,12 @@ html
             #contents
                .bgArea
                   .bg.bg1
-                     img(src = commonPath + 'images/bg_1.jpg', alt="")
                   .bg.bg2
-                     img(src = commonPath + 'images/bg_2.jpg', alt="")
                   .bg.bg3
-                     img(src = commonPath + 'images/bg_3.jpg', alt="")
                block contents
             .globalNav__side.right
+               .buttons
+                  .button
+                  .button
+                  .button
             .globalNav__footer
