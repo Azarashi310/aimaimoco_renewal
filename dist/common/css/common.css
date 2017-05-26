@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+#globalNavBlock {
+  position: relative;
+  margin: 0 30px; }
+  #globalNavBlock .globalNav__header {
+    padding: 10px 0;
+    font-size: 0; }
+  #globalNavBlock .globalNav__Logo {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 0; }
+  #globalNavBlock .globalNav__menuList {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    margin-left: 60px; }
+    #globalNavBlock .globalNav__menuList .cell {
+      display: inline-block; }
+    #globalNavBlock .globalNav__menuList .link {
+      text-decoration: none;
+      font-size: 16px;
+      color: #0f74a3;
+      padding: 9px 5px 8px 5px;
+      margin: 0 11px; }
+  #globalNavBlock .globalNav__side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px; }
+    #globalNavBlock .globalNav__side .copyright {
+      color: #0f74a3;
+      font-size: 12px;
+      height: 640px;
+      -webkit-writing-mode: sideways-lr;
+          -ms-writing-mode: sideways-lr;
+              writing-mode: sideways-lr; }
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+  min-width: 1280px; }
+
+.en {
+  font-family: 'Roboto', sans-serif; }
+  .en.bold {
+    font-weight: bold; }
+
+#contents {
+  width: 100%;
+  background-color: #0f74a3; }
+  #contents .bgArea {
+    position: relative; }
+    #contents .bgArea .bg {
+      position: absolute;
+      font-size: 0;
+      top: 0;
+      left: 0;
+      width: 100%; }
+      #contents .bgArea .bg img {
+        width: 100%; }
+
+

@@ -1,0 +1,50 @@
+include ./mixin
+
+block vars
+   -var dir_root = ""
+   -var title = ""
+   -var description = ""
+   -var keywords = ""
+   -var current = ""
+-var imgPath = "./images/"
+-var commonPath = dir_root + "common/"
+doctype
+html
+   head
+      meta(charset='utf-8')
+      title あいまいもこ
+      +importStyleSheet(commonPath + 'css/reset.css')
+      +importStyleSheet(commonPath + 'css/common.css')
+      block css
+      block js
+   body
+      #main
+         #globalNavBlock
+            .globalNav__header
+               .globalNav__Logo
+                  +img(commonPath + "images/logo.png", "あいまいもこ")
+               .globalNav__menuList
+                  .cell
+                     a.link.en(href = dir_root, class = current == 'top' ? ' current' : '') TOP
+                  .cell
+                     a.link.en(href = dir_root + 'about/', class = current == 'about' ? ' current' : '') ABOUT
+                  .cell
+                     a.link.en(href = dir_root + 'news/', class = current == 'news' ? 'current' : '') NEWS
+                  .cell
+                     a.link.en(href = dir_root + 'gallery/', class = current == 'gallery' ? 'current' : '') GALLERY
+                  .cell
+                     a.link.en.disenabled(href="#", class=current == 'discography' ? 'current' : '') DISCOGRAPHY
+            .globalNav__side.left
+               p.copyright.
+                  © 2016 aimaimoco. All Rights Reserved.
+            #contents
+               .bgArea
+                  .bg.bg1
+                     img(src = commonPath + 'images/bg_1.jpg', alt="")
+                  .bg.bg2
+                     img(src = commonPath + 'images/bg_2.jpg', alt="")
+                  .bg.bg3
+                     img(src = commonPath + 'images/bg_3.jpg', alt="")
+               block contents
+            .globalNav__side.right
+            .globalNav__footer

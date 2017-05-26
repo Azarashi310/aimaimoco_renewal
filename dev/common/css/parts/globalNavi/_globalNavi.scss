@@ -1,0 +1,42 @@
+#globalNavBlock{
+	position: relative;
+	margin:0 30px;
+	.globalNav__header{
+		padding: 10px 0;
+		font-size:0;
+	}
+	.globalNav__Logo{
+		display: inline-block;
+		vertical-align: middle;
+		padding:6px 0;
+	}
+	.globalNav__menuList{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+		margin-left: 60px;
+		.cell{
+			display: inline-block;
+		}
+		.link{
+			text-decoration: none;
+			font-size:16px;
+			color: #0f74a3;
+			padding:9px 5px 8px 5px;
+			margin:0 11px;
+		}
+	}
+	.globalNav__side{
+		position: absolute;
+		left:0;
+		top:0;
+		width:30px;
+		.copyright{
+			color: #0f74a3;
+			font-size:12px;
+			height:640px;
+			writing-mode: sideways-lr;
+		}
+	}
+}
+@import "globalNavi_sp";

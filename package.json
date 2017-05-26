@@ -1,0 +1,42 @@
+{
+  "name": "myweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azarashi310/myWebSite.git"
+  },
+  "author": "sato_ryo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azarashi310/myWebSite/issues"
+  },
+  "homepage": "https://github.com/Azarashi310/myWebSite#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "coffee-loader": "^0.7.3",
+    "coffee-script": "^1.12.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-coffee": "^2.3.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-watch": "^4.3.11",
+    "gulp-webpack": "^1.5.0",
+    "require-dir": "^0.3.1",
+    "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0"
+  }
+}
