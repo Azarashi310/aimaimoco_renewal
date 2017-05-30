@@ -17,18 +17,15 @@ export default class FittingTargetArea{
         });
     }
     fittingTarget(){
-        $.each(this.$target.children(),()=>{
-            console.log($(this));
-            if($(window).height() <= 820){
-                $(this).css({
-                    'height':820
-                });
-            }else{
-                $(this).css({
-                    'height':$(window).height()
-                });
-            }
-        });
+	    if($(window).height() <= 700){
+		    this.$target.css({
+			    'height':700
+		    });
+	    }else{
+		    this.$target.css({
+			    'height':$(window).height()
+		    });
+	    }
     }
 }
 

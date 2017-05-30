@@ -22,13 +22,13 @@ export default class FittingBgArea{
     }
 
     resizeBgArea(){
-        if($(window).height() <= 820){
+        if($(window).height() <= 700){
             console.log('small');
             this.$target.css({
-                'height':720
+                'height':600
             });
             this.$target.parent().css({
-                'height':720
+                'height':600
             });
         }
         else{

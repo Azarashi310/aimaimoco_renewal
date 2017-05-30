@@ -34,10 +34,10 @@
         left: 0;
         bottom: -4px;
         display: block;
-        -webkit-transition: bottom 0.4s ease-in-out;
-        -o-transition: bottom 0.4s ease-in-out;
-        -moz-transition: bottom 0.4s ease-in-out;
-        transition: bottom 0.4s ease-in-out; }
+        -webkit-transition: bottom 0.2s ease-in-out;
+        -o-transition: bottom 0.2s ease-in-out;
+        -moz-transition: bottom 0.2s ease-in-out;
+        transition: bottom 0.2s ease-in-out; }
       #globalNavBlock .globalNav__menuList .link.current:after {
         bottom: -1px; }
       #globalNavBlock .globalNav__menuList .link:hover:after {
@@ -61,26 +61,38 @@
             -ms-writing-mode: tb-rl;
                 writing-mode: vertical-rl;
         line-height: 30px;
-        margin: 0 2px 0 0; }
+        margin: 0 2px 0 0;
+        height: 100%; }
     #globalNavBlock .globalNav__side.right {
+      width: 30px;
       right: -30px;
       top: 0;
-      width: auto;
       text-align: center; }
       #globalNavBlock .globalNav__side.right .buttons {
-        line-height: 30px; }
+        line-height: 30px;
+        height: 72px;
+        list-style: none;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; }
       #globalNavBlock .globalNav__side.right .button {
         width: 8px;
         height: 8px;
-        background-color: #0f74a3;
+        background-color: #c6d1e2;
         -webkit-border-radius: 50%;
            -moz-border-radius: 50%;
-                border-radius: 50%; }
+                border-radius: 50%;
+        margin: 12px auto; }
+        #globalNavBlock .globalNav__side.right .button.active {
+          background-color: #0f74a3; }
 
 body {
   font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
   min-width: 1280px;
-  min-height: 820px; }
+  min-height: 700px; }
 
 .en {
   font-family: 'Roboto', sans-serif; }

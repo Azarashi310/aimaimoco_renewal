@@ -113,13 +113,13 @@
 	    }, {
 	        key: 'resizeBgArea',
 	        value: function resizeBgArea() {
-	            if ($(window).height() <= 820) {
+	            if ($(window).height() <= 700) {
 	                console.log('small');
 	                this.$target.css({
-	                    'height': 720
+	                    'height': 600
 	                });
 	                this.$target.parent().css({
-	                    'height': 720
+	                    'height': 600
 	                });
 	            } else {
 	                this.resizedHeight = $(window).height() - (this.margin[0] + this.margin[2]);
@@ -178,20 +178,15 @@
 	    }, {
 	        key: 'fittingTarget',
 	        value: function fittingTarget() {
-	            var _this2 = this;
-
-	            $.each(this.$target.children(), function () {
-	                console.log($(_this2));
-	                if ($(window).height() <= 820) {
-	                    $(_this2).css({
-	                        'height': 820
-	                    });
-	                } else {
-	                    $(_this2).css({
-	                        'height': $(window).height()
-	                    });
-	                }
-	            });
+	            if ($(window).height() <= 700) {
+	                this.$target.css({
+	                    'height': 700
+	                });
+	            } else {
+	                this.$target.css({
+	                    'height': $(window).height()
+	                });
+	            }
 	        }
 	    }]);
 
