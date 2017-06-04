@@ -92,7 +92,8 @@ $themeColor:#0f74a3;
 				background-color: #c6d1e2;
 				border-radius: 50%;
 				margin:12px auto;
-				&.active{
+				cursor: pointer;
+				&.current{
 					background-color: $themeColor;
 				}
 			}

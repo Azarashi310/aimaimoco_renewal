@@ -1,0 +1,14 @@
+.globalNav__header
+   .globalNav__Logo
+      +img(commonPath + "images/logo.png", "あいまいもこ")
+   .globalNav__menuList
+      .cell
+         a.link.en(href = dir_root, class = current == 'top' ? ' current' : '') TOP
+      .cell
+         a.link.en(href = dir_root + 'about/', class = current == 'about' ? ' current' : '') ABOUT
+      .cell
+         a.link.en(href = dir_root + 'news/', class = current == 'news' ? 'current' : '') NEWS
+      .cell
+         a.link.en(href = dir_root + 'gallery/', class = current == 'gallery' ? 'current' : '') GALLERY
+      .cell
+         a.link.en.disenabled(href="#", class=current == 'discography' ? 'current' : '') DISCOGRAPHY

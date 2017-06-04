@@ -214,11 +214,23 @@
 	        _classCallCheck(this, BgAreaAnimetion);
 
 	        this.$target = $target;
+	        this.$targetsArray = [];
 	    }
 
 	    _createClass(BgAreaAnimetion, [{
 	        key: "init",
-	        value: function init() {}
+	        value: function init() {
+	            var _this2 = this;
+
+	            this.switchingBgAnimetion();
+	            var _this = this;
+	            $.each(_this.$target, function () {
+	                console.log(_this2);
+	            });
+	        }
+	    }, {
+	        key: "switchingBgAnimetion",
+	        value: function switchingBgAnimetion() {}
 	    }]);
 
 	    return BgAreaAnimetion;

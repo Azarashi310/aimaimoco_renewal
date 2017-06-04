@@ -85,8 +85,9 @@
         -webkit-border-radius: 50%;
            -moz-border-radius: 50%;
                 border-radius: 50%;
-        margin: 12px auto; }
-        #globalNavBlock .globalNav__side.right .button.active {
+        margin: 12px auto;
+        cursor: pointer; }
+        #globalNavBlock .globalNav__side.right .button.current {
           background-color: #0f74a3; }
 
 body {

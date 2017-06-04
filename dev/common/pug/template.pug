@@ -1,53 +1,31 @@
 include ./mixin
 
 block vars
-   -var dir_root = ""
-   -var title = ""
-   -var description = ""
-   -var keywords = ""
-   -var current = ""
+	-var dir_root = ""
+	-var title = ""
+	-var description = ""
+	-var keywords = ""
+	-var current = ""
 -var imgPath = "./images/"
 -var commonPath = dir_root + "common/"
 doctype
 html
-   head
-      meta(charset='utf-8')
-      title あいまいもこ
-      +importStyleSheet(commonPath + 'css/reset.css')
-      +importStyleSheet(commonPath + 'css/common.css')
-      +importJavascript(commonPath + 'js/lib.js')
-      +importJavascript(commonPath + 'js/common.js')
-      block css
-      block js
-   body
-      #main
-         #globalNavBlock
-            .globalNav__header
-               .globalNav__Logo
-                  +img(commonPath + "images/logo.png", "あいまいもこ")
-               .globalNav__menuList
-                  .cell
-                     a.link.en(href = dir_root, class = current == 'top' ? ' current' : '') TOP
-                  .cell
-                     a.link.en(href = dir_root + 'about/', class = current == 'about' ? ' current' : '') ABOUT
-                  .cell
-                     a.link.en(href = dir_root + 'news/', class = current == 'news' ? 'current' : '') NEWS
-                  .cell
-                     a.link.en(href = dir_root + 'gallery/', class = current == 'gallery' ? 'current' : '') GALLERY
-                  .cell
-                     a.link.en.disenabled(href="#", class=current == 'discography' ? 'current' : '') DISCOGRAPHY
-            .globalNav__side.left
-               p.copyright.
-                  © 2016 aimaimoco. All Rights Reserved.
-            #contents
-               .bgArea
-                  .bg.bg1
-                  .bg.bg2
-                  .bg.bg3
-               block contents
-            .globalNav__side.right
-               ul.buttons
-                  li.button
-                  li.button
-                  li.button
-            .globalNav__footer
+	head
+		meta(charset='utf-8')
+		title あいまいもこ
+		+importStyleSheet(commonPath + 'css/reset.css')
+		+importStyleSheet(commonPath + 'css/common.css')
+		+importJavascript(commonPath + 'js/lib.js')
+		+importJavascript(commonPath + 'js/common.js')
+		block css
+		block js
+	body
+		#main
+			#globalNavBlock
+				include parts/globalNav_header
+				include parts/globalNav_left
+				#contents
+					include parts/bgArea
+					block contents
+				include parts/globalNav_right
+				include parts/globalNav_footer

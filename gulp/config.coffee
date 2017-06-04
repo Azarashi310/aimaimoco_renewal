@@ -58,6 +58,6 @@ module.exports =
 	watch :
 		pass :
 			pug     : src + '**/*.pug'
-			pug_tmp : src + '**/' + common + 'pug/*.pug'
+			pug_tmp : src + '**/' + common + '**/*.pug'
 			style   : src + '**/**/*.scss'
 			webpack : src + '**/js/**/*.js'
