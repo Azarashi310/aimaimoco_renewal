@@ -47,5 +47,8 @@ body{
 		overflow-y: scroll;
 		top:0;
 		left:0;
+		&.top{
+			overflow-y: visible;
+		}
 	}
 }

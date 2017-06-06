@@ -1,0 +1,20 @@
+extends ./common/pug/template
+
+block vars
+    -var dir_root = "./"
+    -var title = "あいまいもこ"
+    -var description = ""
+    -var keywords = ""
+    -var current = "news"
+block css
+    +importStyleSheet('./css/index.css')
+block contents
+    #news
+        h1.news__title.en NEWS
+        ul.news__list
+            li.news
+                p.date 2017.00.00（月）
+                .descriptionArea
+                    h2.title 【タイトルが入ります（Title text.）】
+                    p.text.
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。

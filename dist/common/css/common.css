@@ -153,5 +153,7 @@ body {
     overflow-y: scroll;
     top: 0;
     left: 0; }
+    #contents #contentMain.top {
+      overflow-y: visible; }
 
 
