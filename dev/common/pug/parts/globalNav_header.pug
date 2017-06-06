@@ -12,3 +12,14 @@
          a.link.en(href = dir_root + 'gallery/', class = current == 'gallery' ? 'current' : '') GALLERY
       .cell
          a.link.en.disenabled(href="#", class=current == 'discography' ? 'current' : '') DISCOGRAPHY
+   .globalNav__sns
+      ul.sns
+         li.button.yt
+            a.link(href="#", target="_blank")
+               +img(commonPath + 'images/header_sns_yt.jpg', 'youtube')
+         li.button.tw
+            a.link(href="#", target="_blank")
+               +img(commonPath + 'images/header_sns_tw.jpg', 'twitter')
+         li.button.fb
+            a.link(href="#", target="_blank")
+               +img(commonPath + 'images/header_sns_fb.jpg', 'facebook')

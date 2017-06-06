@@ -4,6 +4,7 @@ $themeColor:#0f74a3;
 	margin:0 30px;
 	.globalNav__header{
 		font-size:0;
+		@include clearfix;
 	}
 	.globalNav__Logo{
 		display: inline-block;
@@ -47,6 +48,26 @@ $themeColor:#0f74a3;
 				&:after{
 					bottom:-1px;
 				}
+			}
+		}
+	}
+	.globalNav__sns{
+		float: right;
+		margin:10px -5px 10px 0;
+		.sns{
+			font-size:0;
+			text-align: center;
+		}
+		.button{
+			display: inline-block;
+			vertical-align: middle;
+			margin:0 5px;
+		}
+		.link{
+			display: block;
+			transition:opacity 0.2s ease-in-out;
+			&:hover{
+				opacity:0.5;
 			}
 		}
 	}

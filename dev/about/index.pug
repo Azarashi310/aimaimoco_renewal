@@ -1,0 +1,13 @@
+extends ../common/pug/template
+
+block vars
+    -var dir_root = "../"
+    -var title = "あいまいもこ"
+    -var description = ""
+    -var keywords = ""
+    -var current = "about"
+block css
+    +importStyleSheet('./css/index.css')
+block contents
+    #about
+        h1.about__title.en ABOUT
