@@ -1,25 +1,25 @@
 .globalNav__header
-   .globalNav__Logo
-      +img(commonPath + "images/logo.png", "あいまいもこ")
-   .globalNav__menuList
-      .cell
-         a.link.en(href = dir_root, class = current == 'top' ? ' current' : '') TOP
-      .cell
-         a.link.en(href = dir_root + 'about/', class = current == 'about' ? ' current' : '') ABOUT
-      .cell
-         a.link.en(href = dir_root + 'news/', class = current == 'news' ? 'current' : '') NEWS
-      .cell
-         a.link.en(href = dir_root + 'gallery/', class = current == 'gallery' ? 'current' : '') GALLERY
-      .cell
-         a.link.en.disenabled(class = current == 'discography' ? 'current' : '') DISCOGRAPHY
-   .globalNav__sns
-      ul.sns
-         li.button.yt
-            a.link(href="#", target="_blank")
-               +img(commonPath + 'images/header_sns_yt.jpg', 'youtube')
-         li.button.tw
-            a.link(href="#", target="_blank")
-               +img(commonPath + 'images/header_sns_tw.jpg', 'twitter')
-         li.button.fb
-            a.link(href="#", target="_blank")
-               +img(commonPath + 'images/header_sns_fb.jpg', 'facebook')
+    .globalNav__Logo
+        +img(commonPath + "images/logo.png", "あいまいもこ")
+    .globalNav__menuList
+        .cell
+            a.link.en(href = dir_root, class = current == 'top' ? ' current' : '') TOP
+        .cell
+            a.link.en(href = dir_root + 'about/', class = current == 'about' ? ' current' : '') ABOUT
+        .cell
+            a.link.en(href = dir_root + 'news/', class = current == 'news' ? 'current' : '') NEWS
+        .cell
+            a.link.en(href = dir_root + 'gallery/', class = current == 'gallery' ? 'current' : '') GALLERY
+        .cell
+            a.link.en.disenabled(class = current == 'discography' ? 'current' : '') DISCOGRAPHY
+    .globalNav__sns
+        ul.sns
+            li.button.yt
+                a.link(href="#", target="_blank")
+                    +img(commonPath + 'images/header_sns_yt.jpg', 'youtube')
+            li.button.tw
+                a.link(href="#", target="_blank")
+                    +img(commonPath + 'images/header_sns_tw.jpg', 'twitter')
+            li.button.fb
+                a.link(href="#", target="_blank")
+                    +img(commonPath + 'images/header_sns_fb.jpg', 'facebook')
