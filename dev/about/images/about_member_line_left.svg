@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="162" height="31" viewBox="0 0 162 31">
-  <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAAAfAgMAAAAZyP4jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAAD///8AAABzxoNxAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAeSURBVDjLYwjFBRwYiAWjKkdVjqocVTl0VaIVfQEAjAEVGXGVY2YAAAAASUVORK5CYII=" width="162" height="31"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 162 30" style="enable-background:new 0 0 162 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-miterlimit:100;}
+</style>
+<line class="st0" x1="-0.5" y1="0.5" x2="100.5" y2="0.5"/>
+<line class="st0" x1="101" y1="0" x2="101" y2="30"/>
+<line class="st0" x1="101.5" y1="29.5" x2="162" y2="29.5"/>
 </svg>

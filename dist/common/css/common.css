@@ -47,6 +47,10 @@
         bottom: -1px; }
       #globalNavBlock .globalNav__menuList .link:hover:after {
         bottom: -1px; }
+      #globalNavBlock .globalNav__menuList .link.disenabled {
+        color: rgba(15, 116, 163, 0.3); }
+        #globalNavBlock .globalNav__menuList .link.disenabled:hover:after {
+          bottom: -4px; }
   #globalNavBlock .globalNav__sns {
     float: right;
     margin: 10px -5px 10px 0; }

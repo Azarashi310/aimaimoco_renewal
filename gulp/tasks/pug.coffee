@@ -13,6 +13,6 @@ gulp.task 'pug', ->
 
 gulp.task 'pug_tmp', ->
 	gulp.src config.pug.src
-		.pipe $.pug(config.pug.opt)
-		.on 'error', handleErrors
-		.pipe gulp.dest(config.pug.dest)
+	.pipe $.pug(config.pug.opt)
+	.on 'error', handleErrors
+	.pipe gulp.dest(config.pug.dest)

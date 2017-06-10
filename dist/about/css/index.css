@@ -69,7 +69,19 @@
       font-size: 34px;
       letter-spacing: 0.04em;
       font-weight: 300;
-      color: #ffffff; }
+      color: #ffffff;
+      position: relative; }
+      #about .about__member .title .line {
+        width: 162px;
+        display: block;
+        position: absolute;
+        left: 50%; }
+        #about .about__member .title .line.left {
+          margin-left: -204px;
+          top: 15px; }
+        #about .about__member .title .line.right {
+          margin-left: 40px;
+          top: -12px; }
     #about .about__member .memberList {
       list-style: none;
       padding-top: 4px; }

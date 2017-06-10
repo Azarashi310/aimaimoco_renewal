@@ -49,6 +49,14 @@ $themeColor:#0f74a3;
 					bottom:-1px;
 				}
 			}
+			&.disenabled{
+				color: rgba(15, 116, 163, 0.3);
+				&:hover{
+					&:after{
+						bottom:-4px;
+					}
+				}
+			}
 		}
 	}
 	.globalNav__sns{
