@@ -4,5 +4,6 @@ $(()=>{
     const twitter = new Twitter();
     // twitter.init();
     // twitter.getTwitterData();
+
 });
 
