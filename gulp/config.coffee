@@ -25,7 +25,7 @@ module.exports =
       log: false
   concat:
     lib: [
-      src + common + 'js/lib/jquery321.js',
+      src + common + 'js/lib/jquery210.js',
       src + common + 'js/lib/TweenMax.min.js'
     ]
     filename: 'lib.js'

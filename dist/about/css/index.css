@@ -50,21 +50,25 @@
     margin: 50px auto 0 auto; }
   #about .about__intro .descriptionArea {
     font-size: 0;
-    width: 1100px;
-    margin-left: -50px;
-    margin-top: 46px; }
+    width: 1000px; }
+    #about .about__intro .descriptionArea.jp {
+      margin-top: 0;
+      padding-top: 12px; }
+    #about .about__intro .descriptionArea.en {
+      margin-top: 0px;
+      padding-top: 14px; }
     #about .about__intro .descriptionArea .description {
-      width: 475px;
       font-size: 15px;
       line-height: 2;
       color: #fff;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      margin: 0 25px; }
+      text-align: center; }
+      #about .about__intro .descriptionArea .description.jp {
+        margin-top: 30px; }
+      #about .about__intro .descriptionArea .description.en {
+        margin-top: 30px; }
   #about .about__member {
     text-align: center;
-    margin-top: 85px; }
+    margin-top: 110px; }
     #about .about__member .title {
       font-size: 34px;
       letter-spacing: 0.04em;
@@ -77,28 +81,34 @@
         position: absolute;
         left: 50%; }
         #about .about__member .title .line.left {
-          margin-left: -204px;
-          top: 15px; }
+          margin-left: -202px;
+          top: 18px; }
         #about .about__member .title .line.right {
           margin-left: 40px;
-          top: -12px; }
+          top: -18px; }
     #about .about__member .memberList {
       list-style: none;
-      padding-top: 4px; }
+      padding-top: 4px;
+      font-size: 0;
+      text-align: left; }
     #about .about__member .member {
       font-size: 0;
       height: 150px;
-      margin-top: 50px; }
+      margin-top: 50px;
+      width: 475px;
+      display: inline-block; }
+      #about .about__member .member:nth-child(even) {
+        margin-left: 50px; }
       #about .about__member .member .visual {
         display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
         width: 150px;
         height: 150px;
         background-color: #000; }
       #about .about__member .member .introduction {
         display: inline-block;
-        vertical-align: top;
-        width: 850px;
+        vertical-align: middle;
+        width: 306px;
         text-align: left;
         color: #ffffff;
         -webkit-box-sizing: border-box;
