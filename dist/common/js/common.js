@@ -1623,9 +1623,9 @@
 
 /***/ }),
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-	/* WEBPACK VAR INJECTION */(function(console) {"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -1640,30 +1640,65 @@
 	        _classCallCheck(this, BgAreaAnimetion);
 
 	        this.$target = $target;
-	        this.$targetsArray = [];
+	        this.$targetArray = [];
+	        this.current = 0;
+	        this.bgLength = 0;
+	        this.intervalID;
 	    }
 
 	    _createClass(BgAreaAnimetion, [{
-	        key: "init",
+	        key: 'init',
 	        value: function init() {
-	            var _this2 = this;
-
-	            this.switchingBgAnimetion();
 	            var _this = this;
-	            $.each(_this.$target, function () {
-	                console.log(_this2);
-	            });
+	            this.bgLength = this.$target.length;
+	            for (var i = 0; i < this.bgLength; i++) {
+	                if ($(this.$target[i]).hasClass('current')) {
+	                    this.current = i;
+	                }
+	                this.$targetArray[i] = $(this.$target[i]);
+	            }
+	            this.intervalID = setInterval(function () {
+	                var next = 0;
+	                if (_this.current == _this.bgLength - 1) {
+	                    next = 0;
+	                } else {
+	                    next = _this.current + 1;
+	                }
+	                _this.switchingBgAnimetion(next);
+	            }, 8000);
 	        }
 	    }, {
-	        key: "switchingBgAnimetion",
-	        value: function switchingBgAnimetion() {}
+	        key: 'switchingBgAnimetion',
+	        value: function switchingBgAnimetion(next) {
+	            var _this2 = this;
+
+	            this.$targetArray[next].addClass('next');
+	            var tl = new TimelineMax({
+	                delay: 0,
+	                paused: true,
+	                onComplete: function onComplete() {
+	                    _this2.$targetArray[_this2.current].removeClass('current');
+	                    _this2.$targetArray[next].removeClass('next').addClass('current');
+	                    _this2.current = next;
+	                }
+	            });
+	            tl.addLabel('startAnimation', 0);
+	            tl.insertMultiple([TweenMax.to(this.$targetArray[this.current], 0.4, {
+	                opacity: 0
+	            }), TweenMax.to(this.$targetArray[next], 0.4, {
+	                opacity: 1
+	            })], 'startAnimation');
+	            tl.play();
+	        }
+	    }, {
+	        key: 'bgChangeLoop',
+	        value: function bgChangeLoop() {}
 	    }]);
 
 	    return BgAreaAnimetion;
 	}();
 
 	exports.default = BgAreaAnimetion;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ })
 /******/ ]);

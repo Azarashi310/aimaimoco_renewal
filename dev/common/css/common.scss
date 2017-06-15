@@ -29,6 +29,7 @@ body{
 			top:0;
 			left: 0;
 			width:100%;
+			display: none;
 			&.bg3{
 				background-image: url('../images/bg_1.jpg');
 			}
@@ -37,6 +38,14 @@ body{
 			}
 			&.bg1{
 				background-image: url('../images/bg_3.jpg');
+			}
+			&.next{
+				display: block;
+				z-index:2;
+			}
+			&.current{
+				z-index:10;
+				display: block;
 			}
 		}
 	}
@@ -47,6 +56,7 @@ body{
 		overflow-y: scroll;
 		top:0;
 		left:0;
+		z-index:20;
 		&.top{
 			overflow-y: visible;
 		}

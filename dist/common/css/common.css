@@ -143,20 +143,28 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%; }
+      width: 100%;
+      display: none; }
       #contents .bgArea .bg.bg3 {
         background-image: url("../images/bg_1.jpg"); }
       #contents .bgArea .bg.bg2 {
         background-image: url("../images/bg_2.jpg"); }
       #contents .bgArea .bg.bg1 {
         background-image: url("../images/bg_3.jpg"); }
+      #contents .bgArea .bg.next {
+        display: block;
+        z-index: 2; }
+      #contents .bgArea .bg.current {
+        z-index: 10;
+        display: block; }
   #contents #contentMain {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: 20; }
     #contents #contentMain.top {
       overflow-y: visible; }
 

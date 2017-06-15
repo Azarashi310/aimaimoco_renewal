@@ -40,56 +40,13 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _twitter = __webpack_require__(11);
-
-	var _twitter2 = _interopRequireDefault(_twitter);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	$(function () {
-	    var twitter = new _twitter2.default();
-	    twitter.getTwitterData();
-	});
-
-/***/ }),
-
-/***/ 11:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports) {
 
-	'use strict';
+	"use strict";
 
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var Twitter = function () {
-	    function Twitter() {
-	        _classCallCheck(this, Twitter);
-
-	        this.twitterData = '';
-	    }
-
-	    _createClass(Twitter, [{
-	        key: 'getTwitterData',
-	        value: function getTwitterData() {}
-	    }]);
-
-	    return Twitter;
-	}();
-
-	exports.default = Twitter;
+	$(function () {});
 
 /***/ })
-
-/******/ });
+/******/ ]);
