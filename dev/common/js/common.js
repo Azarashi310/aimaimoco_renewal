@@ -7,6 +7,6 @@ $(()=>{
     fittingBgArea.init();
     const fittingTargetArea = new FittingTargetArea($('#globalNavBlock .globalNav__side'));
     fittingTargetArea.init();
-    const bgAreaAnimetion = new BgAreaAnimetion($('#contents .bgArea .bg'));
+    const bgAreaAnimetion = new BgAreaAnimetion($('#contents .bgArea .bg'),$('#globalNavBlock .buttons .button'));
     bgAreaAnimetion.init();
 });

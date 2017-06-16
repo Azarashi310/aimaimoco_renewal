@@ -65,7 +65,7 @@
 	    fittingBgArea.init();
 	    var fittingTargetArea = new _fittingTargetArea2.default($('#globalNavBlock .globalNav__side'));
 	    fittingTargetArea.init();
-	    var bgAreaAnimetion = new _bgAreaAnimetion2.default($('#contents .bgArea .bg'));
+	    var bgAreaAnimetion = new _bgAreaAnimetion2.default($('#contents .bgArea .bg'), $('#globalNavBlock .buttons .button'));
 	    bgAreaAnimetion.init();
 	});
 
@@ -1628,7 +1628,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1636,66 +1636,91 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var BgAreaAnimetion = function () {
-	    function BgAreaAnimetion($target) {
-	        _classCallCheck(this, BgAreaAnimetion);
+	  function BgAreaAnimetion($target, $listButton) {
+	    _classCallCheck(this, BgAreaAnimetion);
 
-	        this.$target = $target;
-	        this.$targetArray = [];
-	        this.current = 0;
-	        this.bgLength = 0;
-	        this.intervalID;
+	    this.$target = $target;
+	    this.$targetArray = [];
+	    this.current = 0;
+	    this.bgLength = 0;
+	    this.intervalID;
+	    this.$bgListButton = $listButton;
+	    this.$bgListButtonArray = [];
+	  }
+
+	  _createClass(BgAreaAnimetion, [{
+	    key: 'init',
+	    value: function init() {
+	      this.bgLength = this.$target.length;
+	      this.$bgListButton.on('click', this, this.bgListButtonClick);
+	      for (var i = 0; i < this.bgLength; i++) {
+	        if ($(this.$target[i]).hasClass('current')) {
+	          this.current = i;
+	        }
+	        this.$bgListButtonArray[i] = $(this.$bgListButton[i]);
+	        this.$targetArray[i] = $(this.$target[i]);
+	      }
+	      this.startInterval();
 	    }
-
-	    _createClass(BgAreaAnimetion, [{
-	        key: 'init',
-	        value: function init() {
-	            var _this = this;
-	            this.bgLength = this.$target.length;
-	            for (var i = 0; i < this.bgLength; i++) {
-	                if ($(this.$target[i]).hasClass('current')) {
-	                    this.current = i;
-	                }
-	                this.$targetArray[i] = $(this.$target[i]);
-	            }
-	            this.intervalID = setInterval(function () {
-	                var next = 0;
-	                if (_this.current == _this.bgLength - 1) {
-	                    next = 0;
-	                } else {
-	                    next = _this.current + 1;
-	                }
-	                _this.switchingBgAnimetion(next);
-	            }, 8000);
+	  }, {
+	    key: 'startInterval',
+	    value: function startInterval() {
+	      var _this = this;
+	      this.intervalID = setInterval(function () {
+	        var next = 0;
+	        if (_this.current == _this.bgLength - 1) {
+	          next = 0;
+	        } else {
+	          next = _this.current + 1;
 	        }
-	    }, {
-	        key: 'switchingBgAnimetion',
-	        value: function switchingBgAnimetion(next) {
-	            var _this2 = this;
+	        _this.switchingBgAnimetion(next);
+	      }, 8000);
+	    }
+	  }, {
+	    key: 'switchingBgAnimetion',
+	    value: function switchingBgAnimetion(next) {
+	      var _this2 = this;
 
-	            this.$targetArray[next].addClass('next');
-	            var tl = new TimelineMax({
-	                delay: 0,
-	                paused: true,
-	                onComplete: function onComplete() {
-	                    _this2.$targetArray[_this2.current].removeClass('current');
-	                    _this2.$targetArray[next].removeClass('next').addClass('current');
-	                    _this2.current = next;
-	                }
-	            });
-	            tl.addLabel('startAnimation', 0);
-	            tl.insertMultiple([TweenMax.to(this.$targetArray[this.current], 0.4, {
-	                opacity: 0
-	            }), TweenMax.to(this.$targetArray[next], 0.4, {
-	                opacity: 1
-	            })], 'startAnimation');
-	            tl.play();
+	      this.$targetArray[next].addClass('next');
+	      this.$bgListButtonArray[next].addClass('next');
+	      var tl = new TimelineMax({
+	        delay: 0,
+	        paused: true,
+	        onComplete: function onComplete() {
+	          _this2.$targetArray[_this2.current].removeClass('current');
+	          _this2.$bgListButtonArray[_this2.current].removeClass('current');
+	          _this2.$targetArray[next].removeClass('next').addClass('current');
+	          _this2.$bgListButtonArray[next].removeClass('next').addClass('current');
+	          _this2.current = next;
 	        }
-	    }, {
-	        key: 'bgChangeLoop',
-	        value: function bgChangeLoop() {}
-	    }]);
+	      });
+	      tl.addLabel('startAnimation', 0);
+	      tl.insertMultiple([TweenMax.to(this.$targetArray[this.current], 0.4, {
+	        opacity: 0
+	      }), TweenMax.to(this.$targetArray[next], 0.4, {
+	        opacity: 1
+	      }), TweenMax.fromTo(this.$bgListButtonArray[this.current], 0.4, {
+	        backgroundColor: '#0F74A3'
+	      }, {
+	        backgroundColor: '#c6d1e2'
+	      }), TweenMax.fromTo(this.$bgListButtonArray[next], 0.4, {
+	        backgroundColor: '#c6d1e2'
+	      }, {
+	        backgroundColor: '#0F74A3'
+	      })], 'startAnimation');
+	      tl.play();
+	    }
+	  }, {
+	    key: 'bgListButtonClick',
+	    value: function bgListButtonClick(e) {
+	      var _this = e.data;
+	      clearInterval(_this.intervalID);
+	      _this.switchingBgAnimetion($(this).data('num'));
+	      _this.startInterval();
+	    }
+	  }]);
 
-	    return BgAreaAnimetion;
+	  return BgAreaAnimetion;
 	}();
 
 	exports.default = BgAreaAnimetion;
