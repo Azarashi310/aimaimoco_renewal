@@ -146,12 +146,13 @@ body {
       -moz-background-size: cover;
         -o-background-size: cover;
            background-size: cover;
-      background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      display: none; }
+      display: none;
+      background-position: 0 0; }
       #contents .bgArea .bg.bg3 {
         background-image: url("../images/bg_1.jpg"); }
       #contents .bgArea .bg.bg2 {
