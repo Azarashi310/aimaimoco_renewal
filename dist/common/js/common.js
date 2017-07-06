@@ -61,7 +61,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	$(function () {
-	    var fittingBgArea = new _fittingBgArea2.default($('#contents .bgArea .bg'), [50, 30, 50, 30]);
+	    var fittingBgArea = new _fittingBgArea2.default($('#contents .bgArea .bg'), [50, 30, 30, 30]);
 	    fittingBgArea.init();
 	    var fittingTargetArea = new _fittingTargetArea2.default($('#globalNavBlock .globalNav__side'));
 	    fittingTargetArea.init();

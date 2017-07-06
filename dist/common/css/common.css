@@ -90,6 +90,13 @@
         line-height: 30px;
         margin: 0 2px 0 0;
         height: 100%; }
+        #globalNavBlock .globalNav__side.left .copyright .copy {
+          display: inline-block;
+          -webkit-transform: rotate(90deg);
+             -moz-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+               -o-transform: rotate(90deg);
+                  transform: rotate(90deg); }
     #globalNavBlock .globalNav__side.right {
       width: 30px;
       right: -30px;
@@ -119,7 +126,7 @@
 
 body {
   font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
-  min-width: 1280px;
+  min-width: 960px;
   min-height: 700px; }
 
 .en {
