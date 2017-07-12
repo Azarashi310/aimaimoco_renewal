@@ -1,3 +1,27 @@
-
+#top {
+  position: relative;
+  height: 100%; }
+  #top .top__noticeArea {
+    background-color: rgba(20, 95, 132, 0.85);
+    position: absolute;
+    bottom: 13px;
+    left: 13px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 14px;
+    padding-left: 20px; }
+  #top .subhead {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold; }
+  #top .detail {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 5px; }
+    #top .detail .date {
+      display: inline-block; }
+    #top .detail .text {
+      display: inline-block;
+      margin-left: 9px; }
 
 
