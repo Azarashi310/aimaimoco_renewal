@@ -46,15 +46,15 @@
 
 	'use strict';
 
-	var _fittingBgArea = __webpack_require__(1);
+	var _fittingBgArea = __webpack_require__(9);
 
 	var _fittingBgArea2 = _interopRequireDefault(_fittingBgArea);
 
-	var _fittingTargetArea = __webpack_require__(9);
+	var _fittingTargetArea = __webpack_require__(10);
 
 	var _fittingTargetArea2 = _interopRequireDefault(_fittingTargetArea);
 
-	var _bgAreaAnimetion = __webpack_require__(10);
+	var _bgAreaAnimetion = __webpack_require__(11);
 
 	var _bgAreaAnimetion2 = _interopRequireDefault(_bgAreaAnimetion);
 
@@ -70,76 +70,7 @@
 	});
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var FittingBgArea = function () {
-	    function FittingBgArea($target, margin) {
-	        _classCallCheck(this, FittingBgArea);
-
-	        this.$target = $target;
-	        this.margin = margin;
-	        this.resizedHeight = 0;
-	    }
-
-	    _createClass(FittingBgArea, [{
-	        key: 'init',
-	        value: function init() {
-	            console.log('windowHeight', $(window).height());
-	            console.log('resizedHeight', $(window).height() - (this.margin[0] + this.margin[2]));
-	            this.resizeBgArea();
-	            var _this = this;
-	            var timer = false;
-	            $(window).resize(function () {
-	                if (timer !== false) {
-	                    clearTimeout(timer);
-	                }
-	                timer = setTimeout(function () {
-	                    console.log('resized');
-	                    _this.resizeBgArea();
-	                }, 200);
-	            });
-	        }
-	    }, {
-	        key: 'resizeBgArea',
-	        value: function resizeBgArea() {
-	            if ($(window).height() <= 700) {
-	                console.log('small');
-	                this.$target.css({
-	                    'height': 600
-	                });
-	                this.$target.parent().css({
-	                    'height': 600
-	                });
-	            } else {
-	                this.resizedHeight = $(window).height() - (this.margin[0] + this.margin[2]);
-	                this.$target.css({
-	                    'height': this.resizedHeight
-	                });
-	                this.$target.parent().css({
-	                    'height': this.resizedHeight
-	                });
-	            }
-	        }
-	    }]);
-
-	    return FittingBgArea;
-	}();
-
-	exports.default = FittingBgArea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ }),
+/* 1 */,
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1577,6 +1508,76 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+	var FittingBgArea = function () {
+	    function FittingBgArea($target, margin) {
+	        _classCallCheck(this, FittingBgArea);
+
+	        this.$target = $target;
+	        this.margin = margin;
+	        this.resizedHeight = 0;
+	    }
+
+	    _createClass(FittingBgArea, [{
+	        key: 'init',
+	        value: function init() {
+	            console.log('windowHeight', $(window).height());
+	            console.log('resizedHeight', $(window).height() - (this.margin[0] + this.margin[2]));
+	            this.resizeBgArea();
+	            var _this = this;
+	            var timer = false;
+	            $(window).resize(function () {
+	                if (timer !== false) {
+	                    clearTimeout(timer);
+	                }
+	                timer = setTimeout(function () {
+	                    console.log('resized');
+	                    _this.resizeBgArea();
+	                }, 200);
+	            });
+	        }
+	    }, {
+	        key: 'resizeBgArea',
+	        value: function resizeBgArea() {
+	            if ($(window).height() <= 700) {
+	                console.log('small');
+	                this.$target.css({
+	                    'height': 600
+	                });
+	                this.$target.parent().css({
+	                    'height': 600
+	                });
+	            } else {
+	                this.resizedHeight = $(window).height() - (this.margin[0] + this.margin[2]);
+	                this.$target.css({
+	                    'height': this.resizedHeight
+	                });
+	                this.$target.parent().css({
+	                    'height': this.resizedHeight
+	                });
+	            }
+	        }
+	    }]);
+
+	    return FittingBgArea;
+	}();
+
+	exports.default = FittingBgArea;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 	var FittingTargetArea = function () {
 	    function FittingTargetArea($target) {
 	        _classCallCheck(this, FittingTargetArea);
@@ -1622,7 +1623,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 	'use strict';
