@@ -46,31 +46,40 @@
 
 	'use strict';
 
-	var _fittingBgArea = __webpack_require__(1);
+	var _fittingBgArea = __webpack_require__(2);
 
 	var _fittingBgArea2 = _interopRequireDefault(_fittingBgArea);
 
-	var _fittingTargetArea = __webpack_require__(9);
+	var _fittingTargetArea = __webpack_require__(10);
 
 	var _fittingTargetArea2 = _interopRequireDefault(_fittingTargetArea);
 
-	var _bgAreaAnimetion = __webpack_require__(10);
+	var _bgAreaAnimetion = __webpack_require__(11);
 
 	var _bgAreaAnimetion2 = _interopRequireDefault(_bgAreaAnimetion);
+
+	var _loadingAnimation = __webpack_require__(12);
+
+	var _loadingAnimation2 = _interopRequireDefault(_loadingAnimation);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	$(function () {
+	    var loading = new _loadingAnimation2.default();
+	    loading.init();
 	    var fittingBgArea = new _fittingBgArea2.default($('#contents .bgArea .bg'), [50, 30, 30, 30]);
 	    fittingBgArea.init();
 	    var fittingTargetArea = new _fittingTargetArea2.default($('#globalNavBlock .globalNav__side'));
 	    fittingTargetArea.init();
-	    var bgAreaAnimetion = new _bgAreaAnimetion2.default($('#contents .bgArea .bg'), $('#globalNavBlock .buttons .button'));
-	    bgAreaAnimetion.init();
+	    $(window).on('LOAD_COMP', function () {
+	        var bgAreaAnimetion = new _bgAreaAnimetion2.default($('#contents .bgArea .bg'), $('#globalNavBlock .buttons .button'));
+	        bgAreaAnimetion.init();
+	    });
 	});
 
 /***/ }),
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
@@ -137,16 +146,16 @@
 	}();
 
 	exports.default = FittingBgArea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*global window, global*/
-	var util = __webpack_require__(3)
-	var assert = __webpack_require__(7)
-	var now = __webpack_require__(8)
+	var util = __webpack_require__(4)
+	var assert = __webpack_require__(8)
+	var now = __webpack_require__(9)
 
 	var slice = Array.prototype.slice
 	var console
@@ -233,7 +242,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process, console) {// Copyright Joyent, Inc. and other Node contributors.
@@ -761,7 +770,7 @@
 	}
 	exports.isPrimitive = isPrimitive;
 
-	exports.isBuffer = __webpack_require__(5);
+	exports.isBuffer = __webpack_require__(6);
 
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -805,7 +814,7 @@
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(6);
+	exports.inherits = __webpack_require__(7);
 
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -823,10 +832,10 @@
 	  return Object.prototype.hasOwnProperty.call(obj, prop);
 	}
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(4), __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(5), __webpack_require__(3)))
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 	// shim for using process in browser
@@ -1016,7 +1025,7 @@
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -1027,7 +1036,7 @@
 	}
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -1056,7 +1065,7 @@
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -1127,7 +1136,7 @@
 	// ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 	// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-	var util = __webpack_require__(3);
+	var util = __webpack_require__(4);
 	var hasOwn = Object.prototype.hasOwnProperty;
 	var pSlice = Array.prototype.slice;
 	var functionsHaveNames = (function () {
@@ -1553,7 +1562,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 	module.exports = now
@@ -1564,7 +1573,7 @@
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(console) {'use strict';
@@ -1619,10 +1628,10 @@
 	}();
 
 	exports.default = FittingTargetArea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1646,7 +1655,7 @@
 	        this.intervalID;
 	        this.$bgListButton = $listButton;
 	        this.$bgListButtonArray = [];
-	        this.bgSlideAnimationTween;
+	        // this.bgSlideAnimationTween;
 	    }
 
 	    _createClass(BgAreaAnimetion, [{
@@ -1657,10 +1666,10 @@
 	            this.bgLength = this.$target.length;
 	            this.$bgListButton.on('click', this, this.bgListButtonClick);
 	            $(window).on('resize', function () {
-	                _this2.bgSlideAnimationTween.pause(0);
-	                _this2.bgSlideAnimation(_this2.current);
-	                clearInterval(_this.intervalID);
-	                _this.startInterval();
+	                //this.bgSlideAnimationTween.pause(0);
+	                //this.bgSlideAnimation(this.current);
+	                clearInterval(_this2.intervalID);
+	                _this2.startInterval();
 	            });
 	            for (var i = 0; i < this.bgLength; i++) {
 	                if ($(this.$target[i]).hasClass('current')) {
@@ -1669,7 +1678,7 @@
 	                this.$bgListButtonArray[i] = $(this.$bgListButton[i]);
 	                this.$targetArray[i] = $(this.$target[i]);
 	            }
-	            this.bgSlideAnimation(this.current);
+	            //this.bgSlideAnimation(this.current);
 	            this.startInterval();
 	        }
 	    }, {
@@ -1703,7 +1712,7 @@
 	                    _this3.$bgListButtonArray[_this3.current].removeClass('current');
 	                    _this3.$targetArray[next].removeClass('next').addClass('current');
 	                    _this3.$bgListButtonArray[next].removeClass('next').addClass('current');
-	                    _this3.bgSlideAnimation(next);
+	                    // this.bgSlideAnimation(next);
 	                    _this3.current = next;
 	                }
 	            });
@@ -1740,23 +1749,81 @@
 	            var realWidth = widthRatio / heightRatio * targetHeight << 0;
 	            return realWidth;
 	        }
-	    }, {
-	        key: 'bgSlideAnimation',
-	        value: function bgSlideAnimation(target) {
-	            if (this.$targetArray[target].width() - this.bgSizeCalc() > 0) return false;
-	            this.bgSlideAnimationTween = TweenMax.fromTo(this.$targetArray[target], 8.5, {
-	                backgroundPosition: '0px 0px'
-	            }, {
-	                backgroundPosition: this.$targetArray[target].width() - this.bgSizeCalc() + 'px 0px',
-	                ease: Power0.easeNone
-	            });
-	        }
+	        // bgSlideAnimation(target){
+	        //     if(this.$targetArray[target].width() - this.bgSizeCalc() > 0) return false;
+	        //     this.bgSlideAnimationTween = TweenMax.fromTo(this.$targetArray[target],8.5,{
+	        //         backgroundPosition:'0px 0px'
+	        //     },{
+	        //         backgroundPosition:this.$targetArray[target].width() - this.bgSizeCalc() + 'px 0px',
+	        //         ease:Power0.easeNone
+	        //     });
+	        // }
+
 	    }]);
 
 	    return BgAreaAnimetion;
 	}();
 
 	exports.default = BgAreaAnimetion;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var LoadingAnimation = function () {
+	    function LoadingAnimation() {
+	        _classCallCheck(this, LoadingAnimation);
+
+	        this.$loading = $('#loading');
+	        this.loadingFlag = false;
+	        this.timeElapsedFlag = false;
+	    }
+
+	    _createClass(LoadingAnimation, [{
+	        key: 'init',
+	        value: function init() {
+	            var _this = this;
+
+	            setTimeout(function () {
+	                _this.timeElapsedFlag = true;
+	                if (_this.timeElapsedFlag && _this.loadingFlag) _this.loadComplete();
+	            }, 2000);
+	            $(window).load(function () {
+	                _this.loadingFlag = true;
+	                if (_this.timeElapsedFlag && _this.loadingFlag) _this.loadComplete();
+	            });
+	        }
+	    }, {
+	        key: 'loadComplete',
+	        value: function loadComplete() {
+	            var _this2 = this;
+
+	            TweenMax.to(this.$loading, 0.4, {
+	                opacity: 0,
+	                onComplete: function onComplete() {
+	                    $(window).trigger('LOAD_COMP');
+	                    _this2.$loading.css({
+	                        'display': 'none'
+	                    });
+	                }
+	            });
+	        }
+	    }]);
+
+	    return LoadingAnimation;
+	}();
+
+	exports.default = LoadingAnimation;
 
 /***/ })
 /******/ ]);

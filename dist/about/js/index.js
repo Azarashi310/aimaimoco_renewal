@@ -40,33 +40,31 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _topAnimation = __webpack_require__(13);
+	var _showAnimation = __webpack_require__(1);
 
-	var _topAnimation2 = _interopRequireDefault(_topAnimation);
+	var _showAnimation2 = _interopRequireDefault(_showAnimation);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	$(function () {
-	    var topAnimation = new _topAnimation2.default();
-	    topAnimation.init();
-	    $(window).on('LOAD_COMP', function () {
-	        topAnimation.animation();
+	    var showAnimation = new _showAnimation2.default();
+	    showAnimation.init();
+	    $(window).load('LOAD_COMP', function () {
+	        showAnimation.animation();
 	    });
 	});
 
 /***/ }),
-
-/***/ 13:
+/* 1 */
 /***/ (function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -76,64 +74,20 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var TopAnimation = function () {
-	    function TopAnimation() {
-	        _classCallCheck(this, TopAnimation);
-
-	        this.$gNavHeader = $('#globalNavBlock .globalNav__header');
-	        this.$gNavSide = $('#globalNavBlock .globalNav__side');
-	        this.$bg = $('#globalNavBlock #contents');
-	        this.$newsNotice = $('.top__noticeArea');
+	var ShowAnimation = function () {
+	    function ShowAnimation() {
+	        _classCallCheck(this, ShowAnimation);
 	    }
 
-	    _createClass(TopAnimation, [{
-	        key: 'init',
-	        value: function init() {
-	            this.$gNavHeader.css({
-	                'opacity': 0
-	            });
-	            this.$gNavSide.css({
-	                'opacity': 0
-	            });
-	            this.$bg.css({
-	                'opacity': 0
-	            });
-	            this.$newsNotice.css({
-	                'opacity': 0,
-	                'bottom': 0
-	            });
-	        }
-	    }, {
-	        key: 'animation',
-	        value: function animation() {
-	            var tl = new TimelineMax({
-	                delay: 0,
-	                paused: true
-	            });
-	            tl.addLabel('gNavAnimation', 0);
-	            tl.addLabel('contentsAnimation', 1.6);
-	            tl.insertMultiple([TweenMax.to(this.$gNavHeader, 0.8, {
-	                opacity: 1
-	            }), TweenMax.to(this.$gNavSide, 0.8, {
-	                delay: 0.4,
-	                opacity: 1
-	            }), TweenMax.to(this.$bg, 0.8, {
-	                delay: 0.4,
-	                opacity: 1
-	            })], 'gNavAnimation');
-	            tl.insertMultiple([TweenMax.to(this.$newsNotice, 0.8, {
-	                opacity: 1,
-	                bottom: 13
-	            })], 'contentsAnimation');
-	            tl.play();
-	        }
+	    _createClass(ShowAnimation, [{
+	        key: "init",
+	        value: function init() {}
 	    }]);
 
-	    return TopAnimation;
+	    return ShowAnimation;
 	}();
 
-	exports.default = TopAnimation;
+	exports.default = ShowAnimation;
 
 /***/ })
-
-/******/ });
+/******/ ]);

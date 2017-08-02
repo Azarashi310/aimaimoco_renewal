@@ -1,7 +1,9 @@
-
+import TopAnimation from './animation/topAnimation'
 
 $(()=>{
-    $(window).load(()=>{
-        console.log('aaaa');
+    const topAnimation = new TopAnimation();
+    topAnimation.init();
+    $(window).on('LOAD_COMP',()=>{
+        topAnimation.animation();
     });
 });

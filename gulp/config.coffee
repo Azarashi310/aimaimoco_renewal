@@ -37,6 +37,7 @@ module.exports =
       'common/js/common': src + 'common/js/common.js'
       'js/index': src + 'js/index.js'
       'news/js/index': src + 'news/js/index.js'
+      'about/js/index': src + 'about/js/index.js'
     output:
       publicPath: dest
       filename: '[name].js'

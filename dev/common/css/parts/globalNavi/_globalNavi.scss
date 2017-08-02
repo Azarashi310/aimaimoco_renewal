@@ -5,6 +5,7 @@ $themeColor:#0f74a3;
 	.globalNav__header{
 		font-size:0;
 		@include clearfix;
+		overflow: hidden;
 	}
 	.globalNav__Logo{
 		display: inline-block;
