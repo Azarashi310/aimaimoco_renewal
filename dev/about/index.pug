@@ -8,16 +8,18 @@ block vars
     -var current = "about"
 block css
     +importStyleSheet('./css/index.css')
+block js
+    +importJavascript('./js/index.js')
 block contents
     #about
         .inner
             h1.about__title.en ABOUT
-            .about__visual
+            .about__visual.jsAnim
                 +img(imgPath + 'about_visual.jpg', alt="")
             .about__intro
-                p.logo
+                p.logo.jsAnim.fadeUp
                     +img(imgPath + 'about_aimaimoco_logo.png', alt="あいまいもこ")
-                .descriptionArea.jp
+                .descriptionArea.jp.jsAnim.fadeUp
                     p.description.jp.
                         2015年2月、<br>
                         福岡の専門学校の同級生だったあうんとsho!がそれまで活動していたバンドを発展的に解散させ...<br>
