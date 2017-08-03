@@ -26,7 +26,8 @@ module.exports =
   concat:
     lib: [
       src + common + 'js/lib/jquery210.js',
-      src + common + 'js/lib/TweenMax.min.js'
+      src + common + 'js/lib/TweenMax.min.js',
+      src + common + 'js/lib/jquery.lazylinepainter-1.7.0.min.js',
     ]
     filename: 'lib.js'
     dest: dest + common + 'js/'

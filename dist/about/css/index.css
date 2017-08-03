@@ -7,20 +7,25 @@
   #about .inner {
     width: 1000px;
     margin: 0 auto; }
-  #about .about__title {
-    font-size: 44px;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-    position: relative;
-    display: inline-block; }
-    #about .about__title:before {
-      content: '';
-      width: 36px;
-      background-color: #ffffff;
-      height: 1px;
+  #about .titleArea {
+    display: inline-block;
+    position: relative; }
+    #about .titleArea .about__title {
+      font-size: 44px;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      position: relative;
+      display: inline-block;
+      opacity: 0; }
+    #about .titleArea .bar {
       position: absolute;
+      background-color: #ffffff;
+      width: 36px;
+      height: 1px;
+      opacity: 0; }
+    #about .titleArea .bar1 {
       -webkit-transform: rotate(-45deg);
          -moz-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
@@ -28,18 +33,13 @@
               transform: rotate(-45deg);
       top: -17px;
       left: 94px; }
-    #about .about__title:after {
-      content: '';
-      width: 36px;
-      background-color: #ffffff;
-      height: 1px;
-      position: absolute;
+    #about .titleArea .bar2 {
       -webkit-transform: rotate(-45deg);
          -moz-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
            -o-transform: rotate(-45deg);
               transform: rotate(-45deg);
-      bottom: -15px;
+      top: 58px;
       left: 20px; }
   #about .about__visual {
     margin-top: 74px;
@@ -75,6 +75,8 @@
       font-weight: 300;
       color: #ffffff;
       position: relative; }
+      #about .about__member .title .text {
+        opacity: 0; }
       #about .about__member .title .line {
         width: 162px;
         display: block;

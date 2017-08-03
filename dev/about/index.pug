@@ -4,6 +4,7 @@ block vars
     -var dir_root = "../"
     -var title = "あいまいもこ"
     -var description = ""
+
     -var keywords = ""
     -var current = "about"
 block css
@@ -13,72 +14,75 @@ block js
 block contents
     #about
         .inner
-            h1.about__title.en ABOUT
-            .about__visual.jsAnim
+            .titleArea.jsAnim.title1
+                h1.about__title.en ABOUT
+                span.bar.bar1
+                span.bar.bar2
+            .about__visual.jsAnim.fadeUp(data-delay=0.8)
                 +img(imgPath + 'about_visual.jpg', alt="")
             .about__intro
                 p.logo.jsAnim.fadeUp
                     +img(imgPath + 'about_aimaimoco_logo.png', alt="あいまいもこ")
-                .descriptionArea.jp.jsAnim.fadeUp
-                    p.description.jp.
+                .descriptionArea.jp
+                    p.description.jp.jsAnim.fadeUp.
                         2015年2月、<br>
                         福岡の専門学校の同級生だったあうんとsho!がそれまで活動していたバンドを発展的に解散させ...<br>
                         新たなﾘｽﾞﾑｾｸｼｮﾝ(RIKI&坂本Q太郎)と手を組み｢あいまいもこ｣を結成。あうんが中心となりｵﾘｼﾞﾅﾙ楽曲を少しづつ増やしていく。
-                    p.description.jp.
+                    p.description.jp.jsAnim.fadeUp.
                         2015年12月、<br>
                         福岡Beat Stationにて初ﾗｲﾌﾞ。
-                    p.description.jp.
+                    p.description.jp.jsAnim.fadeUp.
                         2016年1月、<br>
                         sho!が個人事情によりﾊﾞﾝﾄﾞを一時離れる。後任には弱冠19歳、専門学校の後輩いしむーが加入。<br>
                         更にｵﾘｼﾞﾅﾙ楽曲を増やしていく。福岡市内のﾗｲﾌﾞﾊｳｽで地道に数本のﾗｲﾌﾞを実施、手応えを得る。<br>
                         12月にはﾊﾞﾝﾄﾞ初音源として｢あいいろのはじまり｣(ﾚｲﾝｺ-ﾄ以下、3曲入り)を200枚限定で販売開始。
-                    p.description.jp.
+                    p.description.jp.jsAnim.fadeUp.
                         2017年2月、<br>
                         sho!が復帰、ﾂｲﾝｷﾞﾀ-編成となり更に厚みのあるﾎﾟｯﾌﾟﾛｯｸﾊﾞﾝﾄﾞとしてﾚﾊﾟ-ﾄﾘ-増やしていく。
-                    p.description.jp.
+                    p.description.jp.jsAnim.fadeUp.
                         4月1日、<br>
                         ﾊﾞﾝﾄﾞ初の海外公演として韓国/釜山でﾗｲﾌﾞ。ﾗｲﾌﾞ終了後のCD即売&ｻｲﾝ会では長蛇の列になる。<br>
                         持参した50枚が完売！この時点でCD｢あいいろのはじまり｣200枚が完売！
                 .descriptionArea.en
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         February 2015<br>
                         The Aimaimoko band was a Japanese band first formed in Fukuoka in February 2015. With members Nakaura, Aihara,<br>
                         Syouzaki and Sakamoto. Before then Nakaura and Syouzaki who are the same grade students of music vocational school in Fukuoka<br>
                         has once started activities and disbanded for the develop problem.<br>
                         From then the Aimaimoko band gradually increases the original songs mainly created by Nakaura.
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         December 2015<br>
                         First live show in ”Fukuoka Beast Station”.
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         January 2016<br>
                         Syouzaki left the band temporary for the personal reason. Then a 19 years old junior of the music vocational school joined which makes the amount of original songs increased much more positively.<br>
                         The Aimaimoko band carried out several live shows steadily in a live venue  in Fukuoka and get a good reaction.<br>
                         In December, the band started selling (limited to 3 songs, in addition to the「 RAINCOAT 」)<br>
                         as the band's first sound source for only 200 sheets.
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         February 2017<br>
                         Syouzaki  returned to the band With two guitarist , the pop-rock band repertoire is increasing with much more thickness.
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         April  1st<br>
                         The band held there fist overseas public performance of living show in Busan of Korea.<br>
                         After the  living show ,people get in line waiting for the album signing-selling meeting.<br>
                         All the 50 copies  brought there was sold out.At that time 200 copies of album <the beginning of blue> are sold out.
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         Now the band is busy in producing the new mini album which is excepted to be sold by summer of this year in Fukuoka.<br>
                          Furthermore, the  Aimaimoko is scheduled for several overseas performance. June 17th, 18th in Shanghai China.<br>
                         August  in Busan Korea. September  in Xinjiang Urumqi and the second time in Shanghai China.<br>
                         October the band will also perform for the event in Taipei.
-                    p.description.en.
+                    p.description.en.jsAnim.fadeUp.
                         At present, the Aimaimoko band has already kept nearly 20 original songs.
             .about__member
-                h2.title.en
+                h2.title.en.jsAnim.title2
                     span.line.left
                         include ./images/about_member_line_left.svg
                     span.text MEMBER
                     span.line.right
                         include ./images/about_member_line_right.svg
                 ul.memberList
-                    li.member
+                    li.member.jsAnim.fadeUp
                         .visual
                             +img(imgPath + 'about_memberlist_member1.jpg','')
                         .introduction
@@ -88,7 +92,7 @@ block contents
                             p.description
                                 span.jp.
                                     02/04生。自他共に認めるマヨラー。好きな食べ物はカレイの味醂干しと梅干し。
-                    li.member
+                    li.member.jsAnim.fadeUp
                         .visual
                             +img(imgPath + 'about_memberlist_member4.jpg','')
                         .introduction
@@ -98,7 +102,7 @@ block contents
                             p.description
                                 span.jp.
                                     07/08生 A型。ドラム担当。中学生の時にドラムを始めロックやジャズなど様々な音楽に影響を受ける。
-                    li.member
+                    li.member.jsAnim.fadeUp
                         .visual
                             +img(imgPath + 'about_memberlist_member5.jpg','')
                         .introduction
@@ -108,7 +112,7 @@ block contents
                             p.description
                                 span.jp.
                                     09/03生。中3でギターを始める。工業高校を卒業したが実は機械オンチ。2匹の愛犬への溺愛ぶりは見るに耐えない。
-                    li.member
+                    li.member.jsAnim.fadeUp
                         .visual
                             +img(imgPath + 'about_memberlist_member3.jpg','')
                         .introduction
@@ -118,7 +122,7 @@ block contents
                             p.description
                                 span.jp.
                                     03/08生。好きな音楽は主にファンクやブラックミュージック。和食派。炊きたての白ご飯は至福。食後の甘味はかかせない。
-                    li.member
+                    li.member.jsAnim.fadeUp
                         .visual
                             +img(imgPath + 'about_memberlist_member2.jpg','')
                         .introduction

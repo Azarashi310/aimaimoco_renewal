@@ -2,8 +2,7 @@ import ShowAnimation from './animation/showAnimation'
 
 $(()=>{
     const showAnimation = new ShowAnimation();
-    showAnimation.init();
-    $(window).load('LOAD_COMP',()=>{
-        showAnimation.animation();
+    $(window).on('LOAD_COMP',()=>{
+        showAnimation.init();
     });
 });
