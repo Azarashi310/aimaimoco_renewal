@@ -142,6 +142,32 @@ body {
   background-color: #FFFFFF;
   z-index: 30; }
 
+#caution {
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  z-index: 40; }
+  @media all and (orientation: landscape) {
+    #caution {
+      display: none; } }
+  @media all and (orientation: portrait) {
+    #caution {
+      display: block; } }
+  #caution .notice {
+    font-size: 48px;
+    color: #0f74a3;
+    width: 1200px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
 .sk-cube-grid {
   width: 40px;
   height: 40px;

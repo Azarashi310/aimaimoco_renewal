@@ -13,6 +13,7 @@ html
 	head
 		meta(charset='utf-8')
 		title あいまいもこ
+		+settingViewPort('fixed', 1200)
 		+importStyleSheet(commonPath + 'css/reset.css')
 		+importStyleSheet(commonPath + 'css/common.css')
 		+importJavascript(commonPath + 'js/lib.js')
@@ -31,6 +32,9 @@ html
 				.sk-cube.sk-cube7
 				.sk-cube.sk-cube8
 				.sk-cube.sk-cube9
+		#caution
+			p.notice.
+				当サイトは画面を横向きにしてお楽しみください。
 		#main
 			#globalNavBlock
 				include parts/globalNav_header
