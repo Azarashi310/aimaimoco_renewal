@@ -12,8 +12,13 @@ doctype
 html
 	head
 		meta(charset='utf-8')
-		title あいまいもこ
+		title #{title}
 		+settingViewPort('fixed', 1200)
+		meta(property='og:title',content=title)
+		meta(property='og:site_name',content='あいまいもこ')
+		meta(property='og:description',content=description)
+		meta(property='og:image',content='http://aimaimoko.sakura.ne.jp/common/images/ogimage.png')
+		meta(property='og:url',content='http://aimaimoko.sakura.ne.jp')
 		+importStyleSheet(commonPath + 'css/reset.css')
 		+importStyleSheet(commonPath + 'css/common.css')
 		+importJavascript(commonPath + 'js/lib.js')
