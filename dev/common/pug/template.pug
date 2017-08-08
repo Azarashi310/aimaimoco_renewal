@@ -4,7 +4,7 @@ block vars
 	-var dir_root = ""
 	-var title = ""
 	-var description = ""
-	-var keywords = ""
+	-var keywords = "あいまいもこ,音楽,あうん,RIKI,Sho!,坂本Q太郎,Yu"
 	-var current = ""
 -var imgPath = "./images/"
 -var commonPath = dir_root + "common/"
@@ -17,6 +17,7 @@ html
 		meta(property='og:title',content=title)
 		meta(property='og:site_name',content='あいまいもこ')
 		meta(property='og:description',content=description)
+		meta(property='keywords',content=keywords)
 		meta(property='og:image',content='http://aimaimoko.sakura.ne.jp/common/images/ogimage.png')
 		meta(property='og:url',content='http://aimaimoko.sakura.ne.jp')
 		+importStyleSheet(commonPath + 'css/reset.css')
