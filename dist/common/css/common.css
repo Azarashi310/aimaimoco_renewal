@@ -128,7 +128,8 @@
 body {
   font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
   min-width: 960px;
-  min-height: 700px; }
+  min-height: 700px;
+  -webkit-text-size-adjust: 100%; }
 
 .en {
   font-family: 'Roboto', sans-serif; }
@@ -142,19 +143,21 @@ body {
   background-color: #FFFFFF;
   z-index: 30; }
 
-#caution {
+html #caution {
+  display: none; }
+html.sp #caution {
   position: absolute;
   background-color: #FFFFFF;
   width: 100%;
   height: 100%;
   z-index: 40; }
   @media all and (orientation: landscape) {
-    #caution {
+    html.sp #caution {
       display: none; } }
   @media all and (orientation: portrait) {
-    #caution {
+    html.sp #caution {
       display: block; } }
-  #caution .notice {
+  html.sp #caution .notice {
     font-size: 48px;
     color: #0f74a3;
     width: 1200px;

@@ -5,25 +5,16 @@ export default class FittingBgArea{
         this.resizedHeight = 0;
     }
     init(){
-        console.log('windowHeight', $(window).height());
-        console.log('resizedHeight', $(window).height()-(this.margin[0] + this.margin[2]));
         this.resizeBgArea();
         let _this = this;
         let timer = false;
-        $(window).resize(function() {
-            if (timer !== false) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function() {
-                console.log('resized');
-                _this.resizeBgArea();
-            }, 200);
+        $(window).on('WINDOW_RESIZED',()=>{
+            _this.resizeBgArea();
         });
     }
 
     resizeBgArea(){
         if($(window).height() <= 700){
-            console.log('small');
             this.$target.css({
                 'height':600
             });

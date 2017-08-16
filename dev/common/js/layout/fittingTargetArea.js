@@ -11,7 +11,6 @@ export default class FittingTargetArea{
                 clearTimeout(timer);
             }
             timer = setTimeout(function() {
-                console.log('resized');
                 _this.fittingTarget();
             }, 200);
         });

@@ -4,6 +4,8 @@ import BgAreaAnimetion from './animetion/bgAreaAnimetion'
 import LoadingAnimation from './animetion/loadingAnimation'
 
 $(()=>{
+    const ua = require('./layout/UA');
+    ua.judge();
     const loading = new LoadingAnimation();
     loading.init();
     const fittingBgArea = new FittingBgArea($('#contents .bgArea .bg'),[50,30,30,30]);

@@ -47,7 +47,7 @@
 
 	'use strict';
 
-	var _topAnimation = __webpack_require__(13);
+	var _topAnimation = __webpack_require__(7);
 
 	var _topAnimation2 = _interopRequireDefault(_topAnimation);
 
@@ -63,7 +63,7 @@
 
 /***/ }),
 
-/***/ 13:
+/***/ 7:
 /***/ (function(module, exports) {
 
 	'use strict';
